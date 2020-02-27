@@ -267,7 +267,7 @@
           <h4>Environment</h4>
           <br/>
           <div class="slidecontainer">
-            <h4 style="color:darkgrey; font-size:20px ">Room Temperature</h4>
+            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Room Temperature</h4>
              <div class='slider-title'>
                 <h5>cold</h5>
                 <h5>hot</h5>
@@ -275,15 +275,15 @@
              <input type="range" min= "1" max="100" value="50" class="slider" id="temp">
          </div>
          <div class="slidecontainer">
-           <h4 style="color:darkgrey; font-size:20px ">Light</h4>
+           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Light</h4>
             <div class='slider-title'>
-                <h5>light</h5>
                 <h5>dark</h5>
+                <h5>light</h5>
              </div>
              <input type="range" min="1" max="100" value="50" class="slider" id="light">
          </div>
          <div class="slidecontainer">
-           <h4 style="color:darkgrey; font-size:20px ">Noise</h4>
+           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px">Noise</h4>
             <div class='slider-title'>
                <h5>noisy</h5>
                <h5>quiet</h5>
@@ -291,23 +291,24 @@
             <input type="range" min="1" max="100" value="50" class="slider" id="noise">
          </div>
          <div class="slidecontainer">
-           <h4 style="color:darkgrey; font-size:20px ">Air Quality</h4>
+           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Air Quality</h4>
            <div class='slider-title'>
+              <h5>poor</h5>
               <h5>fresh</h5>
-              <h5>bad</h5>
            </div>
            <input type="range" min="1" max="100" value="50" class="slider" id="air">
         </div>
       </div>
 
+
       <div class="col-lg-4">
           <h4>You</h4>
           <br/>
         <div class="slidecontainer">
-            <h4 style="color:darkgrey; font-size:20px ">Mood</h4>
+            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Mood</h4>
            <div class='slider-title'>
-               <h5>positive</h5>
                <h5>negative</h5>
+               <h5>positive</h5>
            </div>
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
        </div>
@@ -325,34 +326,29 @@
        </div>
          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       </div>
+            <h4 style="color:darkgrey; font-size:20px ">In your own words</h4>
             <textarea id='emotionsarea'>what is your mood like?</textarea>
      </div>
 
      <div class="col-lg-4">
       <h4>Other people</h4>
       <br/>
-
-   <div class="slidecontainer">
-     <div class='slider-title'>
-        <h5>distracting</h5>
-        <h5>non-distracting</h5>
-     </div>
-       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div>
-    <div class="slidecontainer">
-      <div class='slider-title'>
-         <h5>positive</h5>
-         <h5>negative</h5>
+       <div class="slidecontainer">
+           <h4 style="color:darkgrey; font-size:20px ">Distraction</h4>
+             <div class='slider-title'>
+                <h5>non-distracting</h5>
+                <h5>distracting</h5>
+             </div>
+             <input type="range" min="1" max="100" value="50" class="slider" id="distract">
+        </div>
+       <div class="slidecontainer">
+         <h4 style="color:darkgrey; font-size:20px ">Mood</h4>
+          <div class='slider-title'>
+            <h5>calm</h5>
+            <h5>agitated</h5>
+          </div>
+          <input type="range" min="-50" max="+50" value="0" class="slider" id="myRange">
       </div>
-        <input type="range" min="-50" max="+50" value="0" class="slider" id="myRange">
-     </div>
- </div>
-  </div>
-
-
-   </div>
-</section>
-
 <!--
 <section class="page-section mb-0" id="api">
   <div class="container">
