@@ -352,16 +352,7 @@
     </div>
   </div>
 </section>
-<!--
-<section class="page-section mb-0" id="api">
-  <div class="container">
-    <h2 class="page-section-heading text-center text-uppercase">What does the building show?</h2>
-    <div class="row text-center">
-        <iframe width="100%" height="100%" src="https://3d.usb.urbanobservatory.ac.uk/">
-        </iframe>
-    </div>
-  </div>
-</section> -->
+
 
 <!-- Contact Section -->
 <section class="page-section" id="contact">
@@ -442,17 +433,28 @@
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <script type="text/javascript" src="image-map-resizer/js/imageMapResizer.min.js "></script>
   <script type="text/javascript" src="emojionearea/dist/emojionearea.js"></script>
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="/__/firebase/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="/__/firebase/7.9.1/firebase-analytics.js"></script>
+  <!-- Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="/__/firebase/7.9.1/firebase-auth.js"></script>
-  <script src="/__/firebase/7.9.1/firebase-firestore.js"></script>
-  <!-- Initialize Firebase -->
- <script src="/__/firebase/init.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAxb7pvZb-8U6ETWY-T0pGu96RNE7Khp54",
+      authDomain: "uxdiaryusb.firebaseapp.com",
+      databaseURL: "https://uxdiaryusb.firebaseio.com",
+      projectId: "uxdiaryusb",
+      storageBucket: "uxdiaryusb.appspot.com",
+      messagingSenderId: "759851500962",
+      appId: "1:759851500962:web:b9952634655743f89bdefb",
+      measurementId: "G-RY2E4V5CX7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 
   <script type="text/javascript">
         // map follows image
