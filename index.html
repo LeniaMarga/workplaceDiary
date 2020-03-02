@@ -439,7 +439,7 @@
   <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
   <!-- Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
   <script>
     // Your web app's Firebase configuration
@@ -457,10 +457,7 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-</script>
-
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-    <script>function writeData(){
+    function writeData(){
       firebase.database().ref("User").set({
             desk: e.target.title
       })
