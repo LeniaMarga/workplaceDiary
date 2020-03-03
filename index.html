@@ -459,7 +459,7 @@
 
     var database = firebase.database();
     var ref = database.ref('desks');
-    var data= {
+    var data = {
        name: "lenia",
        desk:2
     }
@@ -485,7 +485,7 @@
             alert(desk);
 
             firebase.database().ref("User").set({
-                    desk:e.target.title.value;
+                    desk:e.target.title.value
             });
 
           });
