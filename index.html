@@ -485,7 +485,7 @@
             alert(desk);
 
             firebase.database().ref("Desks").set({
-                    desk:e.target.title
+                    desk:e.target.title.value
             });
 
           });
