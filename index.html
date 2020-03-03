@@ -458,7 +458,7 @@
     console.log(firebase);
 
     var database = firebase.database();
-    var ref = database.ref('desks');
+    var ref = database.ref('Desks');
     var data = {
        name: "lenia",
        desk:2
@@ -484,7 +484,7 @@
             var desk = e.target.title;
             alert(desk);
 
-            firebase.database().ref("User").set({
+            firebase.database().ref("Desks").set({
                     desk:e.target.title.value
             });
 
