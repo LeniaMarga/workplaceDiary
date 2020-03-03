@@ -458,13 +458,15 @@
     console.log(firebase);
 
     var database = firebase.database();
-    // var ref = database.ref('Desks');
-    // var data = {
-    //    name: "lenia",
-    //    desk:2
-    // }
-    //
-    // ref.push(data);
+    var ref = database.ref('desks');
+
+
+    function writeUserData( name, desk) {
+         firebase.database().ref('desks').set({
+               username: name,
+               desk:desk
+        });
+    }
 
   </script>
 
@@ -479,11 +481,7 @@
             var desk = e.target.title;
             alert(desk);
 
-            firebase.database().ref("Desks").set({
-                    name: 'desk',
-                    desk: this.desk
-            });
-
+          writeUserData("lenia",desk);
           });
 
          //slider script
