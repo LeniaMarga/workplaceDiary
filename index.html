@@ -458,6 +458,13 @@
     console.log(firebase);
 
     var database = firebase.database();
+    var ref = database.ref('desks');
+    var data= {
+       name: "lenia",
+       desk:2
+    }
+
+    ref.push(data);
     // function writeData(){
     //   firebase.database().ref("User").set({
     //         desk: e.target.title
@@ -476,13 +483,13 @@
             e.preventDefault();
             var desk = e.target.title;
             alert(desk);
-            function writeDesk(desk){
-              firebase.database().ref("User").set({
-                    desk:desk
+
+            firebase.database().ref("User").set({
+                    desk:e.target.title.value;
             });
-            }
+
           });
-      
+
          //slider script
          $(function() {
          	var rangePercent = $('[type="range"]').val();
