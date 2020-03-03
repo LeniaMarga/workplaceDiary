@@ -479,7 +479,7 @@
             var desk = e.target.title;
             alert(desk);
 
-            firebase.database().ref("Desks").set({
+            firebase.database().ref("Desks").push({
                     name: 'desk',
                     desk: this.desk
             });
