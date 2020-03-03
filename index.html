@@ -465,12 +465,7 @@
     }
 
     ref.push(data);
-    // function writeData(){
-    //   firebase.database().ref("User").set({
-    //         desk: e.target.title
-    //   })
-    //
-    // };
+
   </script>
 
   <script type="text/javascript">
@@ -485,7 +480,8 @@
             alert(desk);
 
             firebase.database().ref("Desks").set({
-                    desk:e.target.title.value
+                    name: 'desk',
+                    desk: this.e.target.title
             });
 
           });
