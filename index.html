@@ -485,12 +485,14 @@
         });
     }
 
-    function writeUserData( name, email) {
+    function writeUserData(name, email) {
          firebase.database().ref('users').set({
                username: name,
                email: email
         });
     }
+
+
 
 
   </script>
@@ -525,9 +527,12 @@
          $(function() {
          	var rangePercent = $('[type="range"]').val();
          	$('[type="range"]').on('change input', function() {
-         		rangePercent = $(this).val();
-         		$('#slidertext').text(rangePercent);
+         		var rangePercent = $(this).val();
+         		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
+
+            var aroundObject = firebase.database.ref('around').child('object');
+            envObject.on('value', rangePercent);
          	});
          });
 
