@@ -495,7 +495,7 @@
 
 
     function writeRangeData(percent, id) {
-         firebase.database().ref('around/' + id).set({
+         firebase.database().ref('around' + id).set({
                percent: percent,
                id: id
         });
