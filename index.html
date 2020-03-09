@@ -478,12 +478,9 @@
     console.log(firebase);
 
     var database = firebase.database();
-    // var ref = database.ref('desks');
-    // var ref = database.ref('desks');
-
 
     function writeDeskData(desk) {
-         firebase.database().ref('desks').set({
+         firebase.database().ref('desks').child().set({
                desk:desk
         });
     }
