@@ -9618,7 +9618,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn-xl {
-  padding: 1rem 1.75rem;
+  /* padding: 1rem 1.75rem; */
   font-size: 1.25rem;
 }
 
