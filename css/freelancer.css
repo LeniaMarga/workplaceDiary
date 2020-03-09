@@ -9941,16 +9941,8 @@ html input[type="range"]::-ms-fill-upper {
   background-color: #9a905d;
 }
 
-.popup-overlay {
-visibility:hidden;
-}
-
 .popup-content {
 visibility:hidden;
-}
-
-.popup-overlay.active{
-visibility:visible;
 }
 
 .popup-content.active {
