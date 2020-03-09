@@ -100,7 +100,7 @@
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button>
+              <button type="submit" class="btn btn-primary btn-xl" id="sendNameEmail">Submit</button>
             </div>
         </div>
       </div>
@@ -476,12 +476,19 @@
     var ref = database.ref('desks');
 
 
-    function writeUserData( name, desk) {
+    function writeDeskData(desk) {
          firebase.database().ref('desks').set({
-               username: name,
                desk:desk
         });
     }
+
+    function writeUserkData( name, email) {
+         firebase.database().ref('users').set({
+               username: name,
+               email: email
+        });
+    }
+
 
   </script>
 
@@ -490,14 +497,28 @@
      $(document).ready(function() {
          $('map').imageMapResize();
 
+
+          //get name and surname
+          $('#sendNameEmail').on('click', function(){
+            var name=    $('#name').value;
+            var email =  $('#email').value;
+
+            writeUserkData(name, email);
+          });
+
+
+
           // get the desk number
           $('area').on('click', function(e){
             e.preventDefault();
             var desk = e.target.title;
             alert(desk);
 
-          writeUserData("lenia",desk);
+            writeDeskData(desk);
           });
+
+
+
 
          //slider script
          $(function() {
