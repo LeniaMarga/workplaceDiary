@@ -478,8 +478,7 @@
     console.log(firebase);
 
     var database = firebase.database();
-    var aroundObject = firebase.database().ref('around').child('object');
-    envObject.on('value', rangePercent);
+
 
     function writeDeskData(desk) {
          firebase.database().ref('desks').set({
@@ -540,6 +539,9 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
             console.log(rangePercent);
+
+            var aroundObject = firebase.database().ref('around').child('object');
+            aroundObject.on('value', rangePercent);
 
             writeRangeData(rangePercent, id);
 
