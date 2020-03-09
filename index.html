@@ -478,7 +478,7 @@
     console.log(firebase);
 
     var database = firebase.database();
-    var aroundObject = firebase.database.ref('around').child('object');
+    var aroundObject = firebase.database().ref('around').child('object');
     envObject.on('value', rangePercent);
 
     function writeDeskData(desk) {
