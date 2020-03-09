@@ -489,7 +489,7 @@
 
 
     function writeUserData(name, email) {
-         firebase.database().ref('users').child(uid).set({
+         firebase.database().ref(uid).child('users').set({
                username: name,
                email: email
         });
