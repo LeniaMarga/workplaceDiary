@@ -493,6 +493,12 @@
     }
 
 
+    function writeRangeData(percent, id) {
+         firebase.database().ref('around').set({
+               percent: percent,
+               id: id
+        });
+    }
 
 
   </script>
@@ -528,11 +534,16 @@
          	var rangePercent = $('[type="range"]').val();
          	$('[type="range"]').on('change input', function() {
          		var rangePercent = $(this).val();
+            var id = $('[type="range"]').attr('id');
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
+            console.log(rangePercent);
 
             var aroundObject = firebase.database.ref('around').child('object');
             envObject.on('value', rangePercent);
+
+            writeRangeData(rangePercent, id);
+
          	});
          });
 
