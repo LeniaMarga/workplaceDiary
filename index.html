@@ -480,7 +480,7 @@
     var database = firebase.database();
 
     function writeDeskData(desk) {
-         firebase.database().ref('desks').child('deskno').set({
+         firebase.database().ref('desks').set({
                desk:desk
         });
     }
