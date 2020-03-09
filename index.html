@@ -116,7 +116,6 @@
       <h4 class="text-center subtitle">select on the map</h4>
       <div class="page-section">
          <div class="container-02">
-             <div id="dialog" title="got it, cheers"></div>
              <img class="img-fluid" src="img/Open Lab Desks.png" alt="" usemap="#deskmap">
              <map name="deskmap" >
                     <area shape="rect" title='01' alt='01' coords="100,850,270,1150" href='sun.htm' style="outline:none;">
@@ -516,8 +515,8 @@
           $('area').on('click', function(e){
             e.preventDefault();
             var desk = e.target.title;
-            // alert(desk);
-            $("#dialog").dialog({modal: true, height: 590, width: 1005 });
+            console.log(desk);
+            alert('thanks, got it!');
             writeDeskData(desk);
           });
 
