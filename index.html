@@ -475,31 +475,44 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    console.log(firebase);
+    firebase.auth().signInAnonymously();
+
+    // console.log(firebase);
 
     var database = firebase.database();
 
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        var uid = user.uid;
 
-    function writeDeskData(desk) {
-         firebase.database().ref('desks').set({
-               desk:desk
-        });
-    }
+        function writeUserData(name, email) {
+             firebase.database().ref('users').child(uid).set({
+                   username: name,
+                   email: email
+            });
+        }
 
-    function writeUserData(name, email) {
-         firebase.database().ref('users').set({
-               username: name,
-               email: email
-        });
-    }
+        function writeDeskData(desk) {
+             firebase.database().ref('desks').child(uid).set({
+                   desk:desk
+            });
+        }
+
+        function writeRangeData(percent, id) {
+             firebase.database().ref('around ' + id).child(uid).set({
+                   percent: percent,
+                   id: id
+            });
+        }
+
+      }
+    });
 
 
-    function writeRangeData(percent, id) {
-         firebase.database().ref('around' + id).set({
-               percent: percent,
-               id: id
-        });
-    }
+
+
+
+
 
 
   </script>
@@ -512,7 +525,7 @@
 
           //get name and surname
           $('#sendNameEmail').on('click', function(){
-            var name=    $('#name').val();
+            var name =  $('#name').val();
             var email =  $('#email').val();
 
             writeUserData(name, email);
