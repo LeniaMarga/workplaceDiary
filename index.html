@@ -483,8 +483,8 @@
 
     var uid = firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        var userid = user.uid;
-        return userid;
+        var uid = user.uid;
+        return uid;
       }
     });
 
