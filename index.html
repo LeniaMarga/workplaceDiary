@@ -481,34 +481,33 @@
 
     var database = firebase.database();
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    var uid = firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        var uid = user.uid;
-
-        function writeUserData(name, email) {
-             firebase.database().ref('users').child(uid).set({
-                   username: name,
-                   email: email
-            });
-        }
-
-        function writeDeskData(desk) {
-             firebase.database().ref('desks').child(uid).set({
-                   desk:desk
-            });
-        }
-
-        function writeRangeData(percent, id) {
-             firebase.database().ref('around ' + id).child(uid).set({
-                   percent: percent,
-                   id: id
-            });
-        }
-
+        var userid = user.uid;
+        return useruid;
       }
     });
 
 
+    function writeUserData(name, email) {
+         firebase.database().ref('users').child(uid).set({
+               username: name,
+               email: email
+        });
+    }
+
+    function writeDeskData(desk) {
+         firebase.database().ref('desks').child(uid).set({
+               desk:desk
+        });
+    }
+
+    function writeRangeData(percent, id) {
+         firebase.database().ref('around ' + id).child(uid).set({
+               percent: percent,
+               id: id
+        });
+    }
 
 
 
