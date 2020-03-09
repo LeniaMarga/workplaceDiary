@@ -116,6 +116,12 @@
       <h4 class="text-center subtitle">select on the map</h4>
       <div class="page-section">
          <div class="container-02">
+             <div id="dialog" class="popup-overlay">
+                 <div class="popup-content">
+                    <p> Got it, cheers!</p>
+                    <button class="close">Close</button>
+                </div>
+             </div>
              <img class="img-fluid" src="img/Open Lab Desks.png" alt="" usemap="#deskmap">
              <map name="deskmap" >
                     <area shape="rect" title='01' alt='01' coords="100,850,270,1150" href='sun.htm' style="outline:none;">
@@ -516,7 +522,12 @@
             e.preventDefault();
             var desk = e.target.title;
             console.log(desk);
-            alert('thanks, got it!');
+            // alert('thanks, got it!');
+            $(".popup, .popup-content").addClass("active");
+            $(".close, .popup").on("click", function(){
+                 $(".popup, .popup-content").removeClass("active");
+            });
+            
             writeDeskData(desk);
           });
 
