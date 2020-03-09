@@ -350,21 +350,21 @@
                <h5>negative</h5>
                <h5>positive</h5>
            </div>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <input type="range" min="1" max="100" value="50" class="slider" id="me_positive">
        </div>
        <div class="slidecontainer">
           <div class='slider-title'>
              <h5>relaxed</h5>
              <h5>tensed</h5>
           </div>
-         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+         <input type="range" min="1" max="100" value="50" class="slider" id="me_tensed">
        </div>
        <div class="slidecontainer">
           <div class='slider-title'>
              <h5>tired</h5>
              <h5>energetic</h5>
           </div>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <input type="range" min="1" max="100" value="50" class="slider" id="me_tired">
        </div>
      </div>
 
@@ -377,7 +377,7 @@
                 <h5>non-distracting</h5>
                 <h5>distracting</h5>
              </div>
-             <input type="range" min="1" max="100" value="50" class="slider" id="distract">
+             <input type="range" min="1" max="100" value="50" class="slider" id="distracted">
         </div>
        <div class="slidecontainer">
          <h4 style="color:darkgrey; font-size:20px ">Mood</h4>
@@ -385,7 +385,7 @@
             <h5>calm</h5>
             <h5>agitated</h5>
           </div>
-          <input type="range" min="-50" max="+50" value="0" class="slider" id="myRange">
+          <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
       </div>
     </div>
   </div>
@@ -535,7 +535,7 @@
          	var rangePercent = $('[type="range"]').val();
          	$('[type="range"]').on('change input', function() {
          		var rangePercent = $(this).val();
-            var id = $('[type="range"]').attr('id');
+            var id = $(this).attr('id');
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
             console.log(rangePercent);
