@@ -610,15 +610,13 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-              // writeRangeData(rangePercent, id);
+              writeRangeData(rangePercent, id);
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
 
 
          });
-
-
 
           // emoticons
           $("#emotionsarea").emojioneArea({
@@ -643,10 +641,6 @@
 
              var name =  $('#name').val();
              var email =  $('#email').val();
-
-            var rangePercent= $('[type="range"]').val();
-            var id = $('[type="range"]').attr('id');
-            writeRangeData(rangePercent, id);
 
              writeEmo(emotext);
              writeUserData(name, email);
