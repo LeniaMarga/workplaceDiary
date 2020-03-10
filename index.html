@@ -595,13 +595,13 @@
             var id = $(this).attr('id');
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
-            console.log(rangePercent);
-            return rangePercent, id;
+              console.log(rangePercent);
+              writeRangeData(rangePercent[0], id);
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
 
-            writeRangeData(rangePercent, id);
+
          });
 
           // emoticons
