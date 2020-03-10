@@ -485,11 +485,13 @@
           // User is signed in.
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
+          var startedAt = firebase.database.ServerValue.TIMESTAMP
           console.log(uid);
           // ...
          firebase.database().ref('users').child(uid).push({
                username: name,
-               email: email
+               email: email,
+               time:  startedAt
           });
 
         } else {
