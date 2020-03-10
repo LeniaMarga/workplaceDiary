@@ -596,13 +596,11 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
             console.log(rangePercent);
-
+            return rangePercent, id;
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
+         	  });
 
-
-
-         	});
             writeRangeData(rangePercent, id);
          });
 
