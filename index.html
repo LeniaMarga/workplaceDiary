@@ -592,12 +592,11 @@
          	var rangePercent = $('[type="range"]').val();
          	$('[type="range"]').on('change input', function() {
          		var rangePercent = $(this).val();
-            var rp = rangePercent.length -1;
             var id = $(this).attr('id');
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-              writeRangeData(rangePercent[rp], id);
+              writeRangeData(rangePercent, id);
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
