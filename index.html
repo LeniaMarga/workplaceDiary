@@ -633,7 +633,12 @@
          //save emo text
           $('#sendMessageButton').on('click', function(){
              var emotext = $("#emotionsarea")[0].emojioneArea.getText();
+
+             var name =  $('#name').val();
+             var email =  $('#email').val();
+
              writeEmo(emotext);
+             writeUserData(name, email);
              });
 
      });
