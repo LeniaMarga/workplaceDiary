@@ -509,7 +509,7 @@
           var uid = user.uid;
           console.log(uid);
 
-         firebase.database().ref('desks').child(uid).set({
+         firebase.database().ref('desks').child(uid).push({
                desk:desk
           });
         } else {
@@ -527,7 +527,7 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           console.log(uid);
-          firebase.database().ref('around ' + id).child(uid).set({
+          firebase.database().ref('around ' + id).child(uid).push({
                percent: percent,
                id: id
           });
@@ -547,7 +547,7 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           console.log(uid);
-          firebase.database().ref('emo').child(uid).set({
+          firebase.database().ref('emo').child(uid).push({
                emo: emo
           });
         } else {
