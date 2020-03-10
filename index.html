@@ -528,7 +528,7 @@
           var uid = user.uid;
           console.log(uid);
           firebase.database().ref('around ' + id).child(uid).push({
-               percent: percent,
+               percent: percent[percent.lenght -1],
                id: id
           });
         } else {
@@ -596,7 +596,7 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-              writeRangeData(rangePercent[0], id);
+              writeRangeData(rangePercent, id);
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
