@@ -91,6 +91,13 @@
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Email Address</label>
+                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
         </div>
       </div>
 
@@ -477,7 +484,7 @@
     var database = firebase.database();
 
 
-    function writeUserData(name) {
+    function writeUserData(name, email) {
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
@@ -489,6 +496,7 @@
           // ...
          firebase.database().ref('users').child(uid).push({
                username: name,
+               email: email,
                time:  startedAt
           });
 
@@ -576,7 +584,9 @@
           //get name and surname
           $('#sendNameEmail').on('click', function(){
             var name =  $('#name').val();
-            writeUserData(name);
+            var email =  $('#email').val();
+
+            writeUserData(name, email);
           });
 
 
