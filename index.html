@@ -610,13 +610,25 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-              writeRangeData(rangePercent, id);
+              writeRangeDataOnClick();
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
 
 
          });
+
+         function writeRangeDataOnClick(){
+               $('#sendMessageButton').on('click', function(){
+               $('[type="range"]').each(function(){
+                     var rangePercent = $('[type="range"]').val();
+                     var id = $('[type="range"]').attr('id');
+                     writeRangeData(range, id);
+                });
+              });
+         };
+
+
 
           // emoticons
           $("#emotionsarea").emojioneArea({
