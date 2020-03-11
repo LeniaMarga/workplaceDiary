@@ -610,8 +610,8 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-               writeRangeData(range, id);
-              // writeRangeDataOnClick();
+               // writeRangeData(rangePercent, id);
+              writeRangeDataOnClick();
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
@@ -619,14 +619,14 @@
 
          });
 
-         // function writeRangeDataOnClick(){
-         //       $('#sendMessageButton').on('click', function(){
-         //             var rangePercent = $('[type="range"]').val();
-         //             var id = $('[type="range"]').attr('id');
-         //             writeRangeData(range, id);
-         //
-         //      });
-         // };
+         function writeRangeDataOnClick(){
+               $('#sendMessageButton').on('click', function(){
+                     var rangePercent = $('[type="range"]').val();
+                     var id = $('[type="range"]').attr('id');
+                     writeRangeData(rangePercent, id);
+
+              });
+         };
 
 
 
