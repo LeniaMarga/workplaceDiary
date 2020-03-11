@@ -620,11 +620,10 @@
 
          function writeRangeDataOnClick(){
                $('#sendMessageButton').on('click', function(){
-               $('[type="range"]').each(function(){
                      var rangePercent = $('[type="range"]').val();
                      var id = $('[type="range"]').attr('id');
                      writeRangeData(range, id);
-                });
+              
               });
          };
 
