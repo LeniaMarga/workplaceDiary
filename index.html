@@ -616,13 +616,12 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-
+              writeRangeData(rangePercent, id);
               // writeRangeDataOnClick();
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
 
-            return rangePercent, id;
          });
 
          // function writeRangeDataOnClick(){
@@ -663,7 +662,7 @@
 
              writeEmo(emotext);
              writeUserData(name, email);
-             writeRangeData(rangePercent, id);
+
              });
 
      });
