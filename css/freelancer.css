@@ -9924,7 +9924,7 @@ html input[type="range"] {
     position: relative;
   }
   html input[type="range"]:active::-webkit-slider-thumb {
-    background: #fff;
+    background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
   }
 }
