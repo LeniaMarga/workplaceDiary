@@ -9906,16 +9906,16 @@ html input[type="range"] {
     background-color: #ddd;
   }
   html input[type="range"]::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 40px;
     -webkit-appearance: none;
     color: #444;
     margin-top: -1px;
     transition: box-shadow 0.2s ease-in-out;
   }
   html input[type="range"]::-webkit-slider-thumb {
-    width: 10px;
+    width: 40px;
     -webkit-appearance: none;
-    height: 10px;
+    height: 40px;
     cursor: ew-resize;
     background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
