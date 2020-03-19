@@ -616,13 +616,13 @@
          		// $('#slidertext').text(rangePercent);
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
-              writeRangeData(rangePercent, id);
+
               // writeRangeDataOnClick();
             // var aroundObject = firebase.database().ref('around').child('object');
             // aroundObject.on('value', rangePercent);
          	  });
 
-
+            return rangePercent, id;
          });
 
          // function writeRangeDataOnClick(){
@@ -659,9 +659,11 @@
 
              var name =  $('#name').val();
              var email =  $('#email').val();
+             var rangePercent =
 
              writeEmo(emotext);
              writeUserData(name, email);
+             writeRangeData(rangePercent, id);
              });
 
      });
