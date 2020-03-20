@@ -10,16 +10,16 @@
       var setting = $.extend({
                  maxLimit: 100,
                  zoomingOrigin: (0, 0),
-                  
+
   		   }, options);
-  
+
   return this.each(function() {
-  var objectToZoom, 
+  var objectToZoom,
       zoomedObject,
       zoomer, slider, status;
-      
+
  objectToZoom = $(this);
-/* Create some DOMs for zoomer UI */ 
+/* Create some DOMs for zoomer UI */
  status = document.createElement('span');
  slider = document.createElement('input');
  zoomer = document.createElement('div');
@@ -35,7 +35,7 @@
     $(status).addClass('zoomer-status').insertBefore(slider).html('Zoom: 10%');
 /* Starting zooming at the same time when user change the range*/
 $(slider).on('input', function(){
-    var zoomer; 
+    var zoomer;
     var  zoom = $(this).val();
     zoomer = zoom/10;
     $(objectToZoom).css({
@@ -51,7 +51,8 @@ $(slider).on('input', function(){
     $(zoomer).insertAfter(this);
 /* To show slider at the top of the object, insert zoomer before (this) */
  $(objectToZoom).wrapAll(zoomedObject);
+ $(objectToZoom).wrapAll('#zoomed');
         });
       };
-    
+
     })(jQuery);
