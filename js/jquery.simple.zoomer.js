@@ -40,7 +40,7 @@ $(slider).on('input', function(){
     zoomer = zoom/10;
     $(objectToZoom).css({
 /*Images will zoom in and out with the CSS3 transformation*/
-     'transform' : 'scale('+zoomer+') translateY(0px)' ,
+     'transform' : 'scale('+zoomer+') translate(0px, 0px)' ,
 /*The origin where from zooming transformation starts */
      'transformOrigin' : setting.zoomingOrigin,
  });
