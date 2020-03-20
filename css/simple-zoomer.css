@@ -1,18 +1,3 @@
-/*  File: simple-zoomer.css
- *   Author: Asif Mughal
- *   URL: https://www.codehim.com
- *   License: MIT License
- *   Copyright (c) 2018 - Asif Mughal
- */
-/* .zoomer-container{
-  background: rgba(0, 0, 0, 0.5);
-  width: 230px;
-  height: 50px;
-  position: absolute;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: -50px;
-} */
 
 .zoom-slider {
   -webkit-appearance: none;
@@ -51,30 +36,3 @@
     outline: 0;
     border: 0;
 }
-
-/* .object-container{
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
-   overflow: visible;
-   overflow-x: scroll;
-   overflow-y: scroll;
-   height: auto;
-   width: 100%;
-}
-
-.image-container img{
-   position: inherit;
-   display:  block;
-   width: 100%;
-   height: auto;
-}
-
-.zoomer-status{
-    color: #fff;
-    font-weight: 400;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
-} */
