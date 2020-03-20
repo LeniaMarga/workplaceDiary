@@ -585,7 +585,10 @@
      $(document).ready(function() {
          $('map').imageMapResize();
 
-         $("#zoom").zoomer();
+         $("#zoom").zoomer({
+           maxLimit: 100, //default value
+           zoomingOrigin: (0, 0) //default value
+         });
 
 
           //get name and surname
