@@ -51,7 +51,7 @@ $(slider).on('input', function(){
     $(zoomer).insertAfter(this);
 /* To show slider at the top of the object, insert zoomer before (this) */
  // $(objectToZoom).wrapAll(zoomedObject);
- $(objectToZoom).wrapAll('#zoomed');
+ $(objectToZoom).wrapAll(document.getElementById('#zoomed'));
         });
       };
 
