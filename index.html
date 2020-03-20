@@ -613,8 +613,8 @@
 
          //slider script
          $(function() {
-         	var rangePercent = $('[type="range"]').val();
-         	$('[type="range"]').on('change input', function() {
+         	var rangePercent = $('.slider').val();
+         	$('.slider').on('change input', function() {
          		var rangePercent = $(this).val();
             var id = $(this).attr('id');
          		// $('#slidertext').text(rangePercent);
