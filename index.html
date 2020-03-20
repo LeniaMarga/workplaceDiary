@@ -114,7 +114,7 @@
                  <!-- <div id="dialog" class="popup-content text-center">
                     <p> Got it, cheers!</p>
                 </div> -->
-             <img class="img-fluid" src="img/Open Lab Desks.png" alt="" usemap="#deskmap">
+             <img class="img-fluid" src="img/Open Lab Desks.png" alt="" usemap="#deskmap" id="zoom">
              <map name="deskmap" >
                     <area shape="rect" title='01' alt='01' coords="100,850,270,1150" href='sun.htm' style="outline:none;">
                     <area shape="rect" title='02' alt='02' coords="100,1155,270,1355" href='sun.htm' style="outline:none;">
@@ -586,7 +586,7 @@
      $(document).ready(function() {
          $('map').imageMapResize();
 
-         $("zoom").zoomer();
+         $("#zoom").zoomer();
 
 
           //get name and surname
