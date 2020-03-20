@@ -48,7 +48,7 @@ $(slider).on('input', function(){
      $(status).html('Zoom: ' + zoom + '%');
 });
      /* The zoomer slider will be show bottom of the object that to be zoom. */
-    $(zoomer).insertAfter(this);
+    $(zoomer).insertBefore(this);
 /* To show slider at the top of the object, insert zoomer before (this) */
   $(objectToZoom).wrapAll(zoomedObject);
 
