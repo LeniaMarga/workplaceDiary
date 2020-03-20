@@ -50,7 +50,7 @@ $(slider).on('input', function(){
      /* The zoomer slider will be show bottom of the object that to be zoom. */
     $(zoomer).insertAfter(this);
 /* To show slider at the top of the object, insert zoomer before (this) */
- $(objectToZoom).wrapAll(zoomedObject);
+ // $(objectToZoom).wrapAll(zoomedObject);
  $(objectToZoom).wrapAll('#zoomed');
         });
       };
