@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 abbr[title],
@@ -7872,7 +7872,7 @@ button.bg-dark:focus {
 
 .ml-auto,
 .mx-auto {
-  margin-left: auto !important;
+  /* margin-left: auto !important; */
 }
 
 @media (min-width: 576px) {
