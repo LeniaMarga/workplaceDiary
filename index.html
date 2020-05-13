@@ -115,22 +115,26 @@ export and send the data after the end of the study. All data will be anonymized
   <!-- ToolKit Section -->
   <section class="page-section" id="toolkit">
     <div class="container" id="zoomed">
-      <h2 style="color: #2c3e50">How are you feeling?</h2>
-      <h4 class="subtitle" style="color: #2c3e50">Upload a picture, a short video or a sketch of your workplace</h4>
-      <div class="page-section">
-         <div class="container-02 zoom"></div>
+      <h2 style="color: #2c3e50">How are you feeling there?</h2>
 
-       </div>
-    </div>
-  </section>
-
-<!--experiment -->
-
-<section class="page-section mb-0" id="toolkit">
-  <div class="container">
-
-    <!-- About Section Heading -->
-    <h2 class="page-section-heading text-center text-uppercase">How is it there?</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <textarea id='emotionsarea' placeholder="how are you feeling today?"></textarea>
+                  <!-- <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea> -->
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
 
     <!-- About Section Content -->
     <div class="row text-center">
@@ -245,7 +249,7 @@ export and send the data after the end of the study. All data will be anonymized
         <form name="sentMessage" id="contactForm" novalidate="novalidate">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
-              <textarea id='emotionsarea' placeholder="what is your mood like"></textarea>
+              <textarea id='emotionsarea' placeholder="how are you feeling today?"></textarea>
               <!-- <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea> -->
               <p class="help-block text-danger"></p>
             </div>
