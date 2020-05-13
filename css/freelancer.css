@@ -7870,7 +7870,7 @@ button.bg-dark:focus {
   margin-bottom: auto !important;
 }
 
-.ml-auto,
+.ml-auto{margin-left: auto !important;}
 .mx-auto {
   /* margin-left: auto !important; */
 }
