@@ -121,14 +121,11 @@ export and send the data after the end of the study. All data will be anonymized
     </div>
     <div class="container" id="zoomed">
      <h2 style="color: #2c3e50">Upload a picture, a short video or a sketch of your workdesk</h2>
-
-
-     <button type="submit" class="btn btn-primary btn-xl" id="submit-all">Upload</button>
      <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
-         <!-- <div class="fallback">
+         <div class="fallback">
            <input paramName= "pics" name="file" type="file" multiple />
-         </div> -->
-     </form>
+         </div>
+      </form>
       <!-- <div class="form-group">
         <button type="submit" class="btn btn-primary btn-xl" id="uploadpick">Upload</button>
       </div> -->
@@ -478,28 +475,6 @@ export and send the data after the end of the study. All data will be anonymized
             // ...
       });
     }
-    
-    Dropzone.options.myDropzone = {
-
-      // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: false,
-
-      init: function() {
-        var submitButton = document.querySelector("#submit-all")
-            myDropzone = this; // closure
-
-        submitButton.addEventListener("click", function() {
-          myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-        });
-
-        // You might want to show the submit button only when
-        // files are dropped here:
-        this.on("addedfile", function() {
-          // Show submit button here and/or inform user to click it.
-        });
-
-      }
-    };
 
 
   </script>
