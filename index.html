@@ -121,13 +121,9 @@ export and send the data after the end of the study. All data will be anonymized
     </div>
     <div class="container" id="zoomed">
      <h2 style="color: #2c3e50">Upload a picture, a short video or a sketch of your workdesk</h2>
-
-
-
-     <form class="dropzone" id="my-awesome-dropzone">
-
-           <input paramName= "pics" name="file" type="file" multiple />
-          <button type="submit" class="btn btn-primary btn-xl" id="uploadall">Upload</button>
+     <!-- <button type="submit" class="btn btn-primary btn-xl" id="uploadall">Upload all</button> -->
+     <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+           <input size="60" paramName= "pics" name="file" type="file" multiple />
      </form>
      <!-- <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
@@ -490,7 +486,7 @@ export and send the data after the end of the study. All data will be anonymized
       autoProcessQueue: false,
       uploadMultiple: true,
       parallelUploads: 100,
-     maxFiles: 100,
+      maxFiles: 100,
 
 
       init: function() {
