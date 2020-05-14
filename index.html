@@ -109,9 +109,14 @@ export and send the data after the end of the study. All data will be anonymized
         </div>
       </div>
      <h2 style="color: #2c3e50">Upload a picture, a short video or a sketch of your workdesk</h2>
-      <div class="form-group">
+     <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+         <div class="fallback">
+           <input paramName= "pics" name="file" type="file" multiple />
+         </div>
+      </form>
+      <!-- <div class="form-group">
         <button type="submit" class="btn btn-primary btn-xl" id="uploadpick">Upload</button>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -267,12 +272,12 @@ export and send the data after the end of the study. All data will be anonymized
 </section>
 
 <!-- Footer -->
-<footer class="footer text-center">
-  <div class="container text-center">
-    <div class="row text-center">
+<footer class="footer ">
+  <div class="container ">
+    <div class="row r">
 
       <!-- Footer Location -->
-      <div class="col-lg-4 mb-5 mb-lg-0 text-center">
+      <div class="col-lg-4 mb-lg-0 ">
         <h4 class="text-uppercase mb-4">Contact</h4>
         <p class="lead mb-0">Lenia Margariti</p>
         <p class="lead mb-0">E.K.Margariti2@newcastle.ac.uk</p>
@@ -295,6 +300,10 @@ export and send the data after the end of the study. All data will be anonymized
   <script type="text/javascript" src="js/jquery.simple.zoomer.js"></script>
   <script type="text/javascript" src="image-map-resizer/js/imageMapResizer.min.js "></script>
   <script type="text/javascript" src="emojionearea/dist/emojionearea.js"></script>
+  <script type="text/javascript" src="./dropzone-5.7.0/dist/dropzone.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
