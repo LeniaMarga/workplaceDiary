@@ -123,12 +123,17 @@ export and send the data after the end of the study. All data will be anonymized
      <h2 style="color: #2c3e50">Upload a picture, a short video or a sketch of your workdesk</h2>
 
 
-     <button type="submit" class="btn btn-primary btn-xl" id="submit-all">Upload</button>
-     <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
-         <!-- <div class="fallback">
+
+     <form class="dropzone" id="my-awesome-dropzone">
+
            <input paramName= "pics" name="file" type="file" multiple />
-         </div> -->
+          <button type="submit" class="btn btn-primary btn-xl" id="uploadall">Upload</button>
      </form>
+     <!-- <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+         <div class="fallback">
+           <input paramName= "pics" name="file" type="file" multiple />
+         </div>
+     </form> -->
       <!-- <div class="form-group">
         <button type="submit" class="btn btn-primary btn-xl" id="uploadpick">Upload</button>
       </div> -->
@@ -478,17 +483,23 @@ export and send the data after the end of the study. All data will be anonymized
             // ...
       });
     }
-    
-    Dropzone.options.myDropzone = {
+
+    Dropzone.options.myAwesomeDropzone = {
 
       // Prevents Dropzone from uploading dropped files immediately
       autoProcessQueue: false,
+      uploadMultiple: true,
+      parallelUploads: 100,
+     maxFiles: 100,
+
 
       init: function() {
-        var submitButton = document.querySelector("#submit-all")
+        var submitButton = document.querySelector("#uploadall")
             myDropzone = this; // closure
 
-        submitButton.addEventListener("click", function() {
+        submitButton.addEventListener("click", function(e) {
+          e.preventDefault();
+          e.stopPropagation();
           myDropzone.processQueue(); // Tell Dropzone to process all queued files.
         });
 
@@ -497,6 +508,19 @@ export and send the data after the end of the study. All data will be anonymized
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
         });
+        this.on("sendingmultiple", function() {
+  // Gets triggered when the form is actually being sent.
+  // Hide the success button or the complete form.
+         });
+        this.on("successmultiple", function(files, response) {
+  // Gets triggered when the files have successfully been sent.
+  // Redirect user or notify of success.
+         });
+        this.on("errormultiple", function(files, response) {
+  // Gets triggered when there was an error sending the files.
+  // Maybe show form again, and notify user of error
+         });
+
 
       }
     };
