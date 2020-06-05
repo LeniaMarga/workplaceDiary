@@ -170,13 +170,28 @@
       <br/>
 
         <div class="slidecontainer">
-           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How productive you felt today?</h4>
+           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How productive you were today?</h4>
              <div class='slider-title'>
-                <h5>uproductive</h5>
+                <h5>unproductive</h5>
                 <h5>productive</h5>
              </div>
             <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
          </div>
+         
+         <div class="slidecontainer">
+           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">What caused that?</h4>
+             <form name="sentMessage" id="contactForm" novalidate="novalidate">
+               <div class="control-group">
+                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                   <textarea placeholder="yes/no/what caused that?"></textarea>
+                   <p class="help-block text-danger"></p>
+                 </div>
+               </div>
+               <br>
+               <div id="success"></div>
+             </form>
+          </div>
+
          <div class="slidecontainer">
             <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How much were you distracted?</h4>
               <div class='slider-title'>
@@ -186,33 +201,20 @@
              <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
           </div>
 
-        <!-- <div class="slidecontainer">
-          <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Were you productive today?</h4>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <textarea id='emotionsarea' placeholder="yes/no/what caused that?"></textarea>
-                  <p class="help-block text-danger"></p>
+          <div class="slidecontainer">
+            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">What caused distraction?</h4>
+              <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                <div class="control-group">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <textarea placeholder="yes/no/what caused that?"></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
                 </div>
-              </div>
-              <br>
-              <div id="success"></div>
-            </form>
-         </div> -->
+                <br>
+                <div id="success"></div>
+              </form>
+           </div>
 
-        <!-- <div class="slidecontainer">
-          <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How much were you distracted?</h4>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <textarea id='emotionsarea' placeholder="2, 3, 5/ what caused that?"></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-            </form>
-        </div> -->
         <div class="slidecontainer">
           <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How did you deal with distraction?</h4>
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
@@ -237,7 +239,7 @@
 
 <section class="page-section" >
   <div class="container">
-    <h2 style="color: #2c3e50">Anything else you would like to share about your day?</h2>
+    <h2 style="color: #2c3e50">Anything else you would like to share about your work-day?</h2>
     <div class="control-group">
       <div class="form-group floating-label-form-group controls mb-0 pb-2">
         <label>your thoughts</label>
