@@ -103,7 +103,8 @@
   <!-- ToolKit Section -->
   <section class="page-section" id="toolkit0">
     <div class="container" id="zoomed">
-      <h2 style="color: #2c3e50">Where are you working right now?</h2>
+      <h2 style="color: #2c3e50">Where were you mostly working today?</h2>
+       <h5 style="color: #2c3e50">Specify if you changed many places and the reasons for that...</h5>
       <div class="control-group">
         <div class="form-group floating-label-form-group controls mb-0 pb-2">
           <label>Place</label>
@@ -113,17 +114,7 @@
       </div>
     </div>
   </section>
-  <section class="page-section" id="toolkit1">
-    <div class="container" id="zoomed">
-     <h2 style="color: #2c3e50">Upload a picture or a sketch of your workdesk</h2>
-     <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details or how you personalized your space</h5>
-     <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
-         <div class="fallback">
-           <input paramName= "pics" name="file" type="file" multiple />
-         </div>
-     </form>
-    </div>
-  </section>
+
 
     <!-- Sliders section -->
 <section class="page-section" id="toolkit3">
@@ -196,27 +187,24 @@
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <textarea placeholder="share your experiences"></textarea>
-                  <!-- <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea> -->
+                  <label>Place</label>
+                  <input class="form-control" id="place" type="text" placeholder="home / office / outside / moving around" required="required" data-validation-required-message="">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <br>
-              <div id="success"></div>
             </form>
         </div>
 
         <div class="slidecontainer">
-          <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How did you deal with any negative emotions?</h4>
+          <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">How did you deal with negative emotions?</h4>
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <textarea placeholder=""></textarea>
+                  <label>Place</label>
+                  <input class="form-control" id="place" type="text" placeholder="home / office / outside / moving around" required="required" data-validation-required-message="">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <br>
-              <div id="success"></div>
             </form>
          </div>
 
