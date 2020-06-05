@@ -60,12 +60,12 @@
      <div class="container d-flex flex-column">
            <p>The workplace is changing. Working from home became a necessity during <span style="color:  #ffc107db">Covid-19</span> pandemic, establishing what was an emerging tendency in many sectors.
             As our homes are transforming into workplaces, the ways and spaces we work are becoming more ambiguous, flexible and heterogenous than ever before.</p>
-            <p> Purpose of this study is to gain insights on how people experience working from home during the pandemic and towards the transition to office spaces.</p>
      </div>
      <div class="container d-flex flex-column">
+          <p> Purpose of this study is to gain insights on how people experience working from home during the pandemic and towards the transition to office spaces.</p>
           <p style="margin-bottom:30px"> Please fill in the fields below and manipulate the sliders to reflect how you feel. You need to do that while you are working. It will only take 2-3 minutes of your time :).</p>
-          <p> All data will remain anonymized – see the relevant <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="color: #ffc107db" href="https://forms.gle/y6kM8GbJ75ixucPS9"> information sheet </a>.</p>
-          <!-- <p>Please <a class="js-scroll-trigger" style="color:  #ffc107db" href="">contact me</a> to ask any questions.</p> -->
+          <p> All data will remain anonymized – see the relevant <a class="js-scroll-trigger" style="color:  #ffc107db" herf="https://forms.gle/y6kM8GbJ75ixucPS9"> information sheet </a>.</p>
+          <p>Please <a class="js-scroll-trigger" style="color:  #ffc107db" herf="">contact me</a> to ask any questions.</p>
      </div>
   </header>
 
@@ -98,7 +98,7 @@
   </section>
 
   <!-- ToolKit Section -->
-  <section class="page-section" id="toolkit1">
+  <section class="page-section" id="toolkit">
     <div class="container" id="zoomed">
       <h2 style="color: #2c3e50">Where are you working right now?</h2>
       <div class="control-group">
@@ -110,20 +110,34 @@
       </div>
     </div>
     <div class="container" id="zoomed">
+      <h2 style="color: #2c3e50">How have you personalized your space for working?</h2>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+          <label>Place</label>
+          <input class="form-control" id="place" type="text" placeholder="barriers / plants / anything" required="required" data-validation-required-message="">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="zoomed">
      <h2 style="color: #2c3e50">Upload a picture or a sketch of your workdesk</h2>
-     <h5>Optionally annotate the picture to highlight details on how you personalized your space</h5>
+
      <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
            <input paramName= "pics" name="file" type="file" multiple />
          </div>
      </form>
+      <!-- <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-xl" id="uploadpick">Upload</button>
+      </div> -->
     </div>
   </section>
 
   <!-- ToolKit Section -->
-  <section class="page-section" id="toolkit2">
+  <section class="page-section" id="toolkit">
     <div class="container" id="zoomed">
       <h2 style="color: #2c3e50">How are you feeling today?</h2>
+
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
@@ -135,13 +149,13 @@
                 </div>
               </div>
               <br>
+              <div id="success"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="page-section" id="toolkit3">
+    <section class="page-section" id="toolkit">
     <div class="container" id="zoomed">
     <h2 style="color: #2c3e50">Some more information...</h2>
     <!-- About Section Content -->
