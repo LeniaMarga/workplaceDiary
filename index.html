@@ -116,7 +116,7 @@
     </div>
     <div class="container" id="zoomed">
      <h2 style="color: #2c3e50">Upload a picture or a sketch of your workdesk</h2>
-     <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details on how you personalized your space</h5>
+     <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details or how you personalized your space</h5>
      <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
            <input paramName= "pics" name="file" type="file" multiple />
@@ -125,33 +125,13 @@
     </div>
   </section>
 
-  <!-- ToolKit Section -->
-  <section class="page-section" id="toolkit2">
-    <div class="container" id="zoomed">
-      <h2 style="color: #2c3e50">How are you feeling today?</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <textarea id='emotionsarea' placeholder="how are you feeling today?"></textarea>
-                  <!-- <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea> -->
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section" id="toolkit3">
-    <div class="container" id="zoomed">
+    <!-- Sliders section -->
+<section class="page-section" id="toolkit3">
+  <div class="container" id="zoomed">
     <h2 style="color: #2c3e50">Some more information...</h2>
-    <!-- About Section Content -->
-    <div class="row text-center">
-       <div class="col-lg-4">
+
+      <div class="row text-center">
+         <div class="col-lg-4">
           <h4>Environment</h4>
           <br/>
           <div class="slidecontainer">
@@ -293,6 +273,26 @@
   </div>
 </section>
 
+<!-- emotion Section -->
+<section class="page-section" id="toolkit2">
+  <div class="container" id="zoomed">
+    <h2 style="color: #2c3e50">How are you feeling today?</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <textarea id='emotionsarea' placeholder="had a bad sleep / low mood / all great"></textarea>
+                <!-- <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea> -->
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 <section class="page-section" id="contact">
