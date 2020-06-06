@@ -107,7 +107,7 @@
       <div class="control-group">
         <div class="form-group floating-label-form-group controls mb-0 pb-2">
           <label>Place</label>
-          <input class="form-control" id="place" type="text" placeholder="home / office / outside / moving around" required="required" data-validation-required-message="">
+          <input class="form-control" id="placenow" type="text" placeholder="home / office / outside / moving around" required="required" data-validation-required-message="">
           <p class="help-block text-danger"></p>
         </div>
       </div>
@@ -176,7 +176,7 @@
                <h5>negative</h5>
                <h5>positive</h5>
             </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_positive">
+            <input type="range" min="1" max="100" value="50" class="slider" id="mood">
          </div>
          <div class="slidecontainer">
            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Tension</h4>
@@ -184,7 +184,7 @@
                 <h5>relaxed</h5>
                 <h5>tensed</h5>
               </div>
-              <input type="range" min="1" max="100" value="50" class="slider" id="me_tensed">
+              <input type="range" min="1" max="100" value="50" class="slider" id="stance">
           </div>
           <div class="slidecontainer">
               <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Fatigue</h4>
@@ -192,7 +192,7 @@
                  <h5>tired</h5>
                  <h5>energetic</h5>
              </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_tired">
+            <input type="range" min="1" max="100" value="50" class="slider" id="fatigue">
           </div>
           <div class="slidecontainer">
               <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Stress</h4>
@@ -200,7 +200,7 @@
                 <h5>calm</h5>
                 <h5>anxious</h5>
              </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_stressed">
+            <input type="range" min="1" max="100" value="50" class="slider" id="stress">
          </div>
      </div>
 
@@ -213,7 +213,7 @@
                 <h5>focused</h5>
                 <h5>distracted</h5>
               </div>
-             <input type="range" min="1" max="100" value="50" class="slider" id="others_distracted">
+             <input type="range" min="1" max="100" value="50" class="slider" id="distraction">
         </div>
         <div class="slidecontainer">
            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Productivity</h4>
@@ -221,7 +221,7 @@
                 <h5>indifferent</h5>
                 <h5>productive</h5>
              </div>
-            <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
+            <input type="range" min="-50" max="+50" value="0" class="slider" id="productive">
         </div>
       </div>
     </div>
@@ -256,7 +256,7 @@
     <div class="control-group">
       <div class="form-group floating-label-form-group controls mb-0 pb-2">
         <label>your thoughts</label>
-        <input class="form-control" id="place" type="text" placeholder="your thoughts" required="required" data-validation-required-message="">
+        <input class="form-control" id="lastthoughts" type="text" placeholder="your thoughts" required="required" data-validation-required-message="">
         <p class="help-block text-danger"></p>
       </div>
     </div>
@@ -357,25 +357,54 @@
 
     }
 
-    function writeDeskData(desk) {
+    function writePlaceData(place) {
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
-          console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
-         firebase.database().ref('desks').child(uid).push({
-               desk:desk,
+
+          console.log(uid);
+          // ...
+         firebase.database().ref('places').child(uid).push({
+               place: place,
                time:  startedAt
           });
+
         } else {
-              // User is signed out.
-              // ...
+                // User is signed out.
+                // ...
         }
-            // ...
+              // ...
       });
+
     }
+
+        function writeLastThoughts(lastthoughts) {
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              var isAnonymous = user.isAnonymous;
+              var uid = user.uid;
+              var startedAt = firebase.database.ServerValue.TIMESTAMP;
+
+              console.log(uid);
+              // ...
+             firebase.database().ref('throughts').child(uid).push({
+                   throughts: lastthoughts,
+                   time:  startedAt
+              });
+
+            } else {
+                    // User is signed out.
+                    // ...
+            }
+                  // ...
+          });
+
+        }
+
 
     function writeRangeData(percent, id) {
       firebase.auth().onAuthStateChanged(function(user) {
@@ -475,26 +504,6 @@
          });
 
 
-          //get name and surname
-          $('#sendNameEmail').on('click', function(){
-            var name =  $('#name').val();
-            var email =  $('#email').val();
-
-            writeUserData(name, email);
-          });
-
-
-
-          // get the desk number
-          $('area').on('click', function(e){
-            e.preventDefault();
-            var desk = e.target.title;
-            console.log(desk);
-            alert('thanks, got it!');
-            writeDeskData(desk);
-          });
-
-
          //slider script
          $(function() {
          	var rangePercent = $('.slider').val();
@@ -546,12 +555,17 @@
 
              var name =  $('#name').val();
              var email =  $('#email').val();
-             var rangePercent =
+             var placenow = $('#placenow').val();
+             var lastthoughts = $('#lastthoughts').val();
 
              writeEmo(emotext);
              writeUserData(name, email);
-
+             writePlaceData(placenow);
+             writeLastThoughts(lastthoughts);
+             // writePicture(picture);
              });
+
+
 
      });
   </script>
