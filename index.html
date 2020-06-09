@@ -510,9 +510,9 @@
         // files are dropped here:
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
-    
+
             myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-            writePicture(myDropzone.files);
+
 
 
         });
@@ -607,7 +607,7 @@
              writeUserData(name, email);
              writePlaceData(placenow);
              writeLastThoughts(lastthoughts);
-
+             writePicture(myDropzone.files);
              });
 
 
