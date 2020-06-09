@@ -122,6 +122,7 @@
            <input paramName= "pics" name="file" type="file" multiple />
          </div>
      </form>
+     <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload</button>
     </div>
   </section>
 
@@ -594,21 +595,30 @@
                     }
               });
 
-         //save emo text
-          $('#submitall').on('click', function(){
-             var emotext = $("#emotionsarea")[0].emojioneArea.getText();
+         //upload pic
+          $('#uploadpic').on('click', function(){
 
-             var name =  $('#name').val();
-             var email =  $('#email').val();
-             var placenow = $('#placenow').val();
-             var lastthoughts = $('#lastthoughts').val();
-
-             writeEmo(emotext);
-             writeUserData(name, email);
-             writePlaceData(placenow);
-             writeLastThoughts(lastthoughts);
              writePicture(myDropzone.files);
              });
+
+
+         //save all
+           $('#submitall').on('click', function(){
+                 var emotext = $("#emotionsarea")[0].emojioneArea.getText();
+
+                 var name =  $('#name').val();
+                 var email =  $('#email').val();
+                 var placenow = $('#placenow').val();
+                 var lastthoughts = $('#lastthoughts').val();
+
+                 writeEmo(emotext);
+                 writeUserData(name, email);
+                 writePlaceData(placenow);
+                 writeLastThoughts(lastthoughts);
+
+                 });
+
+
 
 
 
