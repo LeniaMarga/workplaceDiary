@@ -510,13 +510,10 @@
         // files are dropped here:
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
-          var uploadButton = document.createElement("Button")
-          uploadButton.addEventListener("click", function(e) {
-            // e.preventDefault();
-            // e.stopPropagation();
+    
             myDropzone.processQueue(); // Tell Dropzone to process all queued files.
             writePicture(myDropzone.files);
-          });
+
 
         });
         this.on("sendingmultiple", function() {
@@ -610,7 +607,7 @@
              writeUserData(name, email);
              writePlaceData(placenow);
              writeLastThoughts(lastthoughts);
-        
+
              });
 
 
