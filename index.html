@@ -492,22 +492,22 @@
     Dropzone.options.myAwesomeDropzone = {
 
       // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: false,
+      autoProcessQueue: true,
       uploadMultiple: true,
       parallelUploads: 100,
       maxFiles: 100,
 
 
       init: function() {
-        var submitButton = document.querySelector("#submitall")
+        // var submitButton = document.querySelector("#submitall")
             myDropzone = this; // closure
 
-        submitButton.addEventListener("click", function(e, file) {
-          e.preventDefault();
-          e.stopPropagation();
-          myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-
-        });
+        // submitButton.addEventListener("click", function(e, file) {
+        //   e.preventDefault();
+        //   e.stopPropagation();
+        //   myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+        //
+        // });
 
         // You might want to show the submit button only when
         // files are dropped here:
@@ -523,7 +523,7 @@
         this.on("successmultiple", function(files, response) {
   // Gets triggered when the files have successfully been sent.
   // Redirect user or notify of success.
-            writePicture(file);
+            // writePicture(file);
          });
         this.on("errormultiple", function(files, response) {
   // Gets triggered when there was an error sending the files.
@@ -606,7 +606,7 @@
              writeUserData(name, email);
              writePlaceData(placenow);
              writeLastThoughts(lastthoughts);
-             writePicture(picture);
+             writePicture(myDropzone.files);
              });
 
 
