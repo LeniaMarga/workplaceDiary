@@ -131,7 +131,7 @@
                <h5>negative</h5>
                <h5>positive</h5>
             </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_positive">
+            <input type="range" min="1" max="100" value="50" class="slider" id="mood_re">
          </div>
          <div class="slidecontainer">
            <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Tension</h4>
@@ -139,7 +139,7 @@
                 <h5>relaxed</h5>
                 <h5>tensed</h5>
               </div>
-              <input type="range" min="1" max="100" value="50" class="slider" id="me_tensed">
+              <input type="range" min="1" max="100" value="50" class="slider" id="stance_re">
           </div>
           <div class="slidecontainer">
               <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Fatigue</h4>
@@ -147,7 +147,7 @@
                  <h5>tired</h5>
                  <h5>energetic</h5>
              </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_tired">
+            <input type="range" min="1" max="100" value="50" class="slider" id="fatigue_re">
           </div>
           <div class="slidecontainer">
               <h4 style="color:darkgrey; font-size:20px; margin-bottom: 0px ">Stress</h4>
@@ -155,7 +155,7 @@
                 <h5>calm</h5>
                 <h5>anxious</h5>
              </div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="me_stressed">
+            <input type="range" min="1" max="100" value="50" class="slider" id="stress_re">
          </div>
      </div>
 
@@ -169,7 +169,7 @@
                 <h5>unproductive</h5>
                 <h5>productive</h5>
              </div>
-            <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
+            <input type="range" min="-50" max="+50" value="0" class="slider" id="productivity_re">
          </div>
 
          <div class="slidecontainer">
@@ -178,7 +178,7 @@
                  <h5>a few times</h5>
                  <h5>a lot</h5>
               </div>
-             <input type="range" min="-50" max="+50" value="0" class="slider" id="others_calm">
+             <input type="range" min="-50" max="+50" value="0" class="slider" id="distraction_re">
           </div>
 
 
@@ -188,7 +188,7 @@
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Place</label>
-                  <input class="form-control" id="place" type="text" placeholder="" required="required" data-validation-required-message="">
+                  <input class="form-control" id="distraction_how" type="text" placeholder="" required="required" data-validation-required-message="">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -201,7 +201,7 @@
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Place</label>
-                  <input class="form-control" id="place" type="text" placeholder="" required="required" data-validation-required-message="">
+                  <input class="form-control" id="emotions_how" type="text" placeholder="" required="required" data-validation-required-message="">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -220,7 +220,7 @@
        <h5 style="color: #2c3e50">Anything particular that happened?</h5>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form name="sentMessage" id="diary_throughts" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <textarea id='emotionsarea' placeholder="my workday diary"></textarea>
@@ -330,25 +330,25 @@
 
     }
 
-    function writeDeskData(desk) {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          console.log(uid);
-          var startedAt = firebase.database.ServerValue.TIMESTAMP;
-         firebase.database().ref('desks').child(uid).push({
-               desk:desk,
-               time:  startedAt
-          });
-        } else {
-              // User is signed out.
-              // ...
-        }
-            // ...
-      });
-    }
+    // function writeDeskData(desk) {
+    //   firebase.auth().onAuthStateChanged(function(user) {
+    //     if (user) {
+    //       // User is signed in.
+    //       var isAnonymous = user.isAnonymous;
+    //       var uid = user.uid;
+    //       console.log(uid);
+    //       var startedAt = firebase.database.ServerValue.TIMESTAMP;
+    //      firebase.database().ref('desks').child(uid).push({
+    //            desk:desk,
+    //            time:  startedAt
+    //       });
+    //     } else {
+    //           // User is signed out.
+    //           // ...
+    //     }
+    //         // ...
+    //   });
+    // }
 
     function writeRangeData(percent, id) {
       firebase.auth().onAuthStateChanged(function(user) {
@@ -359,7 +359,7 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
 
-          firebase.database().ref('around ' + id).child(uid).push({
+          firebase.database().ref('range ' + id).child(uid).push({
                percent: percent,
                id: id,
                time:  startedAt
@@ -381,7 +381,7 @@
           var uid = user.uid;
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
-          firebase.database().ref('emo').child(uid).push({
+          firebase.database().ref('emo_diary').child(uid).push({
                emo: emo,
                time:  startedAt
           });
@@ -519,7 +519,7 @@
 
              var name =  $('#name').val();
              var email =  $('#email').val();
-             var rangePercent =
+            
 
              writeEmo(emotext);
              writeUserData(name, email);
