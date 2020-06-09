@@ -494,27 +494,29 @@
     Dropzone.options.myAwesomeDropzone = {
 
       // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: true,
+      autoProcessQueue: false,
       uploadMultiple: true,
       parallelUploads: 100,
       maxFiles: 100,
 
 
       init: function() {
-        // var submitButton = document.querySelector("#submitall")
+
             myDropzone = this; // closure
 
-        // submitButton.addEventListener("click", function(e, file) {
-        //   e.preventDefault();
-        //   e.stopPropagation();
-        //   myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-        //
-        // });
+
 
         // You might want to show the submit button only when
         // files are dropped here:
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
+          var uploadButton = document.createElement("Button")
+          uploadButton.addEventListener("click", function(e) {
+            // e.preventDefault();
+            // e.stopPropagation();
+            myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+            writePicture(myDropzone.files);
+          });
 
         });
         this.on("sendingmultiple", function() {
@@ -608,7 +610,7 @@
              writeUserData(name, email);
              writePlaceData(placenow);
              writeLastThoughts(lastthoughts);
-             // writePicture(myDropzone.files);
+        
              });
 
 
