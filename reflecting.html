@@ -220,7 +220,7 @@
        <h5 style="color: #2c3e50">Anything particular that happened?</h5>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form name="sentMessage" id="diary_throughts" novalidate="novalidate">
+            <form name="sentMessage" id="diary_thoughts" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <textarea id='emotionsarea' placeholder="my workday diary"></textarea>
@@ -359,7 +359,7 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
 
-          firebase.database().ref('range ' + id).child(uid).push({
+          firebase.database().ref('around ' + id).child(uid).push({
                percent: percent,
                id: id,
                time:  startedAt
@@ -519,7 +519,7 @@
 
              var name =  $('#name').val();
              var email =  $('#email').val();
-            
+
 
              writeEmo(emotext);
              writeUserData(name, email);
