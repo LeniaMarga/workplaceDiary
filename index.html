@@ -122,7 +122,7 @@
            <input paramName= "pics" name="file" type="file" multiple />
          </div>
      </form>
-     <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload</button>
+     <!-- <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload</button> -->
     </div>
   </section>
 
@@ -268,9 +268,9 @@
 <section class="page-section" id="contact">
   <div class="container">
     <div class="form-group">
-      <form novalidate="novalidate">
+      <!-- <form novalidate="novalidate"> -->
         <button type="submit" class="btn btn-primary btn-xl" id="submitall">Submit</button>
-    </form>
+    <!-- </form> -->
     </div>
   </div>
 </section>
@@ -594,13 +594,13 @@
                       travel_places: false
                     }
               });
-
-         //upload pic
-          $('#uploadpic').on('click', function(){
-
-             writePicture(myDropzone.files);
-             });
-
+         //
+         // //upload pic
+         //  $('#uploadpic').on('click', function(){
+         //
+         //     writePicture(myDropzone.files);
+         //     });
+         //
 
          //save all
            $('#submitall').on('click', function(){
@@ -615,7 +615,7 @@
                  writeUserData(name, email);
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
-
+                 writePicture(myDropzone.files);
                  });
 
 
