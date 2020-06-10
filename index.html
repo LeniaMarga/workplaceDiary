@@ -505,7 +505,7 @@
     Dropzone.options.myAwesomeDropzone = {
 
       // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: true,
+      autoProcessQueue: false,
       uploadMultiple: true,
       parallelUploads: 100,
       maxFiles: 100,
@@ -519,7 +519,7 @@
         // files are dropped here:
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
-
+          myDropzone.processQueue();
         });
         this.on("sendingmultiple", function() {
   // Gets triggered when the form is actually being sent.
