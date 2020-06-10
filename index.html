@@ -616,9 +616,14 @@
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
                  writePicture(myDropzone.files);
-                 alert('please confirm :)');
+                 // alert('please confirm :)');
                  // setTimeout(window.location.reload(), 60000);
-
+                 if (confirm('please confirm')) {
+                     setTimeout(window.location.reload(), 60000);
+                 }
+                 else {
+                     // user clicked on No
+                 }
                  });
 
 
