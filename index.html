@@ -330,10 +330,13 @@
     firebase.analytics();
     firebase.auth().signInAnonymously();
 
+
     // console.log(firebase);
 
     var database = firebase.database();
 
+    // Get a reference to the storage service, which is used to create references in your storage bucket
+    var storage = firebase.storage();
 
     function writeUserData(name, email) {
       firebase.auth().onAuthStateChanged(function(user) {
@@ -481,6 +484,10 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
           firebase.database().ref('pictures').child(uid).push({
+               picture: picture,
+               time:  startedAt
+          });
+          firebase.storage.ref('pictures').child(uid).push({
                picture: picture,
                time:  startedAt
           });
