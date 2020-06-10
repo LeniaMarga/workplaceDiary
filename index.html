@@ -487,7 +487,7 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
           firebase.database().ref('pictures').child(uid).push({
-               picture: pictures,
+               picture: picture,
                time:  startedAt
           });
           firebase.storage().ref('pictures/' + picture.name).child(uid).put(picture);
