@@ -599,11 +599,11 @@
                     }
               });
          //
-         // //upload pic
-         //  $('#uploadpic').on('click', function(){
-         //
-         //     writePicture(myDropzone.files);
-         //     });
+         //upload pic
+          $('#uploadpic').on('click', function(){
+
+             writePicture(myDropzone.files);
+             });
 
 
          //save all
@@ -619,7 +619,7 @@
                  writeUserData(name, email);
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
-                 writePicture(myDropzone.files);
+                 // writePicture(myDropzone.files);
                  alert('please confirm your submission :)');
                  setTimeout(window.location.reload(), 60000);
 
