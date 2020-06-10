@@ -600,6 +600,7 @@
           $('#uploadpic').on('click', function(){
              var files = myDropzone.files
              writePicture(files[0]);
+             alert('got it! :)');
              });
 
 
@@ -616,8 +617,6 @@
                  writeUserData(name, email);
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
-
-                 // alert('please confirm your submission :)');
                  // setTimeout(window.location.reload(), 60000);
 
                  });
