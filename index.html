@@ -119,6 +119,7 @@
      <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details or how you personalized your space</h5>
      <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
+           <div class="dz-message" data-dz-message><span>Click to select files</span></div>
            <input paramName= "pics" name="file" type="file" multiple />
          </div>
      </form>
@@ -623,14 +624,9 @@
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
                  writePicture(myDropzone.files);
-                 // alert('please confirm :)');
-                 // setTimeout(window.location.reload(), 60000);
-                 if (confirm('please confirm')) {
-                     setTimeout(window.location.reload(), 60000);
-                 }
-                 else {
-                     // user clicked on No
-                 }
+                 alert('please confirm your submission :)');
+                 setTimeout(window.location.reload(), 100000);
+
                  });
 
 
