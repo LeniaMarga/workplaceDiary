@@ -117,14 +117,19 @@
     <div class="container" id="zoomed">
      <h2 style="color: #2c3e50">Upload a picture or a sketch of your workdesk</h2>
      <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details or how you personalized your space</h5>
-     <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+     <!-- <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
 
            <input paramName= "pics" name="file" type="file" multiple />
            <div class="dz-message" data-dz-message><span>Click to select files</span></div>
-         </div>
-     </form>
-     <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload</button>
+         </div> -->
+         <form action="/file-upload" class="dropzone dz-clickable" id="my-awesome-dropzone">
+
+     <div class="dz-default dz-message"><button class="dz-button" type="button">Drop files here</button></div></form>
+     <!-- </form> -->
+     <div class="container">
+     <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload files</button>
+   </div>
     </div>
   </section>
 
@@ -270,9 +275,9 @@
 <section class="page-section" id="contact">
   <div class="container">
     <div class="form-group">
-      <!-- <form novalidate="novalidate"> -->
+      <form novalidate="novalidate">
         <button type="submit" class="btn btn-primary btn-xl" id="submitall">Submit</button>
-    <!-- </form> -->
+      </form>
     </div>
   </div>
 </section>
@@ -619,9 +624,9 @@
                  writeUserData(name, email);
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
-                 // writePicture(myDropzone.files);
-                 alert('please confirm your submission :)');
-                 setTimeout(window.location.reload(), 60000);
+
+                 // alert('please confirm your submission :)');
+                 // setTimeout(window.location.reload(), 60000);
 
                  });
 
