@@ -119,8 +119,9 @@
      <h5 style="color: #2c3e50">Optionally annotate the picture to highlight details or how you personalized your space</h5>
      <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
          <div class="fallback">
-           <div class="dz-message" data-dz-message><span>Click to select files</span></div>
+
            <input paramName= "pics" name="file" type="file" multiple />
+           <div class="dz-message" data-dz-message><span>Click to select files</span></div>
          </div>
      </form>
      <button type="submit" class="btn btn-primary btn-xl" id="uploadpic">Upload</button>
@@ -504,7 +505,7 @@
     Dropzone.options.myAwesomeDropzone = {
 
       // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: false,
+      autoProcessQueue: true,
       uploadMultiple: true,
       parallelUploads: 100,
       maxFiles: 100,
@@ -514,16 +515,10 @@
 
             myDropzone = this; // closure
 
-
-
         // You might want to show the submit button only when
         // files are dropped here:
         this.on("addedfile", function() {
           // Show submit button here and/or inform user to click it.
-
-            myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-
-
 
         });
         this.on("sendingmultiple", function() {
@@ -604,11 +599,11 @@
                     }
               });
          //
-         //upload pic
-          $('#uploadpic').on('click', function(){
-
-             writePicture(myDropzone.files);
-             });
+         // //upload pic
+         //  $('#uploadpic').on('click', function(){
+         //
+         //     writePicture(myDropzone.files);
+         //     });
 
 
          //save all
@@ -624,7 +619,7 @@
                  writeUserData(name, email);
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
-                 // writePicture(myDropzone.files);
+                 writePicture(myDropzone.files);
                  alert('please confirm your submission :)');
                  setTimeout(window.location.reload(), 60000);
 
