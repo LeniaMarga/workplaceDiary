@@ -487,10 +487,10 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
           firebase.database().ref('pictures').child(uid).push({
-               picture: picture,
+               picture: pictures,
                time:  startedAt
           });
-          firebase.storage().ref('pictures').child(uid).put(picture);
+          firebase.storage().ref('pictures/' + picture.name).child(uid).put(picture);
         } else {
               // User is signed out.
               // ...
@@ -598,8 +598,8 @@
          //
          //upload pic
           $('#uploadpic').on('click', function(){
-
-             writePicture(myDropzone.files);
+             var files = myDropzone.files
+             writePicture(files[0]);
              });
 
 
