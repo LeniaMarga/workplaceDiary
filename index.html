@@ -490,10 +490,10 @@
                picture: picture,
                time:  startedAt
           });
-          // firebase.storage.ref('pictures').child(uid).push({
-          //      picture: picture,
-          //      time:  startedAt
-          // });
+          firebase.storage().ref('pictures').child(uid).put({
+               picture: picture,
+               time:  startedAt
+          });
         } else {
               // User is signed out.
               // ...
