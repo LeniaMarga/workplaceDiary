@@ -309,7 +309,6 @@
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
   <!--  Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
@@ -336,7 +335,7 @@
     // console.log(firebase);
 
     var database = firebase.database();
-
+    var storage = firebase.storage();
 
 
     function writeUserData(name, email) {
