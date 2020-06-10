@@ -394,47 +394,27 @@
       });
     }
 
-    Dropzone.options.myAwesomeDropzone = {
-
-      // Prevents Dropzone from uploading dropped files immediately
-      autoProcessQueue: false,
-      uploadMultiple: true,
-      parallelUploads: 100,
-      maxFiles: 100,
-
-
-      init: function() {
-        var submitButton = document.querySelector("#submitall")
-            myDropzone = this; // closure
-
-        submitButton.addEventListener("click", function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-        });
-
-        // You might want to show the submit button only when
-        // files are dropped here:
-        this.on("addedfile", function() {
-          // Show submit button here and/or inform user to click it.
-        });
-        this.on("sendingmultiple", function() {
-  // Gets triggered when the form is actually being sent.
-  // Hide the success button or the complete form.
-         });
-        this.on("successmultiple", function(files, response) {
-  // Gets triggered when the files have successfully been sent.
-  // Redirect user or notify of success.
-         });
-        this.on("errormultiple", function(files, response) {
-  // Gets triggered when there was an error sending the files.
-  // Maybe show form again, and notify user of error
-         });
-
-
-      }
-    };
-
+    function writeOtherEntries(emoh, dish, pl) {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          console.log(uid);
+          var startedAt = firebase.database.ServerValue.TIMESTAMP;
+          firebase.database().ref('distract_emo_place_entries_re').child(uid).push({
+               emotions_how: emoh,
+               distraction_how:dish,
+               place:pl,
+               time:  startedAt
+          });
+        } else {
+              // User is signed out.
+              // ...
+        }
+            // ...
+      });
+    }
 
   </script>
 
@@ -517,13 +497,16 @@
          //save emo text
           $('#submitall').on('click', function(){
              var emotext = $("#emotionsarea")[0].emojioneArea.getText();
-
+             var place = $('#place').val();
              var name =  $('#name').val();
              var email =  $('#email').val();
+             var emotions_how = $('#emotions_how').val();
+             var distraction_how = $('#distraction_how').val();
 
 
              writeEmo(emotext);
              writeUserData(name, email);
+             writeOtherEntries(emotions_how, distraction_how, place);
 
              });
 
