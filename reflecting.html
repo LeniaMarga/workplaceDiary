@@ -437,7 +437,7 @@
       });
     }
 
-    function writeDistractionHow(distraction_how) {
+    function writeDistractionHow(distraction_what,distraction_how) {
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
@@ -446,6 +446,7 @@
           console.log(uid);
           var startedAt = firebase.database.ServerValue.TIMESTAMP;
           firebase.database().ref('distraction_how').child(uid).push({
+               distraction_what: distraction_what,
                distraction_how: distraction_how,
                time:  startedAt
           });
@@ -584,6 +585,7 @@
              var email =  $('#email').val();
              var emotions_how = $('#emotions_how').val();
              var distraction_how = $('#distraction_how').val();
+             var distraction_what = $('#distraction_what').val();
              var restore = $('#restore').val();
 
 
@@ -591,7 +593,7 @@
              writeUserData(name, email);
              writeEmoHow(emotions_how);
              writeRestoreHow(restore);
-             writeDistractionHow(distraction_how);
+             writeDistractionHow(distraction_what,distraction_how);
              writePlaces(placestoday);
 
              });
