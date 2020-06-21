@@ -561,22 +561,10 @@
          		$(this).css('filter', 'hue-rotate(-' + rangePercent + 'deg)');
               console.log(rangePercent);
               writeRangeData(rangePercent, id);
-              // writeRangeDataOnClick();
-            // var aroundObject = firebase.database().ref('around').child('object');
-            // aroundObject.on('value', rangePercent);
+
          	  });
 
          });
-
-         // function writeRangeDataOnClick(){
-         //       $('#sendMessageButton').on('click', function(){
-         //             var rangePercent = $('[type="range"]').val();
-         //             var id = $('[type="range"]').attr('id');
-         //             writeRangeData(rangePercent, id);
-         //
-         //      });
-         // };
-
 
 
           // emoticons
@@ -600,7 +588,7 @@
           $('#uploadpic').on('click', function(){
              var files = myDropzone.files
              writePicture(files[0]);
-             alert('Thanks, got it! :)');
+             alert('Thanks, the file has been uploaded! :)');
              });
 
 

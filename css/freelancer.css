@@ -9921,9 +9921,9 @@ form .row:first-child .floating-label-form-group {
     transition: box-shadow 0.2s ease-in-out;
   }
 .slider::-webkit-slider-thumb {
-    width: 40px;
+    width: 10px;
     -webkit-appearance: none;
-    height: 40px;
+    height: 10px;
     cursor: ew-resize;
     background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
