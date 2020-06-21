@@ -10028,7 +10028,7 @@ visibility:visible;
 	background: #505050;
 	border: 2px solid white;
 	cursor: pointer;
-	box-shadow: 0px 0px 12px #212121;
+	/* box-shadow: 0px 0px 12px #212121; */
 }
 
 
@@ -10044,5 +10044,5 @@ visibility:visible;
 	background: #505050;
 	border: 2px solid white;
 	cursor: pointer;
-	box-shadow: 0px 0px 12px #212121;
+	/* box-shadow: 0px 0px 12px #212121; */
 }
