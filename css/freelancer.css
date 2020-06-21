@@ -9937,7 +9937,12 @@ form .row:first-child .floating-label-form-group {
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
     z-index: 1000;
   }
+
+
+  
 }
+
+
 .slider::-moz-range-progress {
   background-color: #43e5f7;
 }
