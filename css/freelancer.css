@@ -9921,19 +9921,21 @@ form .row:first-child .floating-label-form-group {
     transition: box-shadow 0.2s ease-in-out;
   }
 .slider::-webkit-slider-thumb {
-    width: 10px;
+    width: 40px;
     -webkit-appearance: none;
-    height: 10px;
+    height: 40px;
     cursor: ew-resize;
     background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
     /* border-radius: 50%; */
     transition: box-shadow 0.2s ease-in-out;
     position: relative;
+    z-index: 1000;
   }
   .slider:active::-webkit-slider-thumb {
     background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+    z-index: 1000;
   }
 }
 .slider::-moz-range-progress {
