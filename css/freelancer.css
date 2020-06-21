@@ -9962,47 +9962,7 @@ visibility:visible;
 
 
 /***AF slider****/
-.AffectiveSlider .intensity_cue_svg {
-	width: 78%;
-	position: relative;
-	top: -25px;
-}
 
-@media (max-width: 1100px) {
-	.AffectiveSlider .intensity_cue_svg {
-		width: 76%;
-		position: relative;
-		top: 5px;
-	}
-}
-
-#AS-arousal:focus {
-	outline: none;
-}
-
-.AffectiveSlider #AS-arousal{
-	/* fix for FF unable to apply focus style bug  */
-	border: 10px solid white;
-
-	/*required for proper track sizing in FF*/
-	width: 80%;
-	margin: 0px;
-	padding: 0px;
-	vertical-align: top;
-	margin-top: 6px;
-}
-
-
-.AffectiveSlider #AS-arousal::-moz-range-track {
-	width: 100%;
-	height: 20px;
-	background: #ddd;
-	border-radius: 10px;
-	border: none;
-}
-#AS-arousal:focus::-moz-range-track {
-	background: #ccc;
-}
 
 .AffectiveSlider #AS-arousal::-moz-range-thumb {
 	height: 35px;
@@ -10012,26 +9972,7 @@ visibility:visible;
 	border: 2px solid #505050;
 }
 
-.AffectiveSlider #AS-arousal::-moz-range-thumb:hover {
-	background: #505050;
-	border: 2px solid white;
-	cursor: pointer;
-	box-shadow: 0px 0px 12px #212121;
-}
 
-
-.AffectiveSlider #AS-arousal{
-	-webkit-appearance: none;
-}
-
-
-#AS-arousal::-webkit-slider-runnable-track {
-	width: 100%;
-	height: 20px;
-	border: none;
-	background: #ddd;
-	border-radius: 10px;
-}
 
 #AS-arousal::-webkit-slider-thumb {
 	-webkit-appearance: none;
@@ -10051,28 +9992,6 @@ visibility:visible;
 }
 
 
-#AS-arousal:focus::-webkit-slider-runnable-track {
-	background: #ccc;
-}
-
-#AS-arousal::-ms-track {
-	width: 100%;
-	height: 20px;
-	/*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-	background: transparent;
-	/*leave room for the larger thumb to overflow with a transparent border */
-	border-color: transparent;
-	border-width: 16px 0;
-	/*remove default tick marks*/
-	color: transparent;
-}
-#AS-arousal::-ms-fill-lower {
-	background: #ddd;
-	border-radius: 10px;
-}
-#AS-arousal::-ms-fill-upper {
-	background: #ddd;
-	border-radius: 10px;
 }
 #AS-arousal::-ms-thumb {
 	height: 35px;
@@ -10086,10 +10005,4 @@ visibility:visible;
 	border: 2px solid white;
 	cursor: pointer;
 	box-shadow: 0px 0px 12px #212121;
-}
-#AS-arousal:focus::-ms-fill-lower {
-	background: #ccc;
-}
-#AS-arousal:focus::-ms-fill-upper {
-	background: #ccc;
 }
