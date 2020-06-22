@@ -9921,7 +9921,7 @@ form .row:first-child .floating-label-form-group {
     height: 10px;
     -webkit-appearance: none;
     color: #444;
-    margin-top: 5px; 
+    margin-top: -10px;
     transition: box-shadow 0.2s ease-in-out;
   }
 
