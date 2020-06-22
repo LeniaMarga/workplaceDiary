@@ -9898,6 +9898,8 @@ form .row:first-child .floating-label-form-group {
 
 /* slider css */
 
+/**if I wease the borders     */
+
 .slider {
   outline: 0;
   border: 0;
@@ -9929,7 +9931,7 @@ form .row:first-child .floating-label-form-group {
     height: 35px;
     cursor: ew-resize;
     background: white;
-    /* box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff; */
+    box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
     /* border-radius: 50%; */
     transition: box-shadow 0.2s ease-in-out;
     /* border: 2px solid #505050; */
@@ -9947,7 +9949,7 @@ form .row:first-child .floating-label-form-group {
     background: #505050;
     /* border: 2px solid white; */
     cursor: pointer;
-    /* box-shadow: 0px 0px 12px #212121; */
+    box-shadow: 0px 0px 12px #212121;
   }
 
   .slider::-moz-range-thumb {
@@ -9971,7 +9973,7 @@ form .row:first-child .floating-label-form-group {
     	background: #505050;
     	/* border: 2px solid white; */
     	cursor: pointer;
-    	/* box-shadow: 0px 0px 12px #212121; */
+    	box-shadow: 0px 0px 12px #212121;
     }
 
   }
