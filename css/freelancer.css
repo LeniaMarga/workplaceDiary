@@ -9909,7 +9909,6 @@ form .row:first-child .floating-label-form-group {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  
 .slider {
     overflow: hidden;
     height: 10px;
