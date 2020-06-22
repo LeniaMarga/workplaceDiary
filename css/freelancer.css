@@ -9921,7 +9921,7 @@ form .row:first-child .floating-label-form-group {
     height: 10px;
     -webkit-appearance: none;
     color: #444;
-    margin-top: -1px;
+    margin-top: 5px;
     transition: box-shadow 0.2s ease-in-out;
   }
 
@@ -9937,8 +9937,8 @@ form .row:first-child .floating-label-form-group {
     /* border: 2px solid #505050; */
     position: relative;
     z-index: 1000;
-    margin: -15px;
   }
+
   .slider:active::-webkit-slider-thumb {
     background: white;
     /* box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff; */
@@ -9958,7 +9958,7 @@ form .row:first-child .floating-label-form-group {
   	border-radius: 50%;
   	background: white;
   	/* border: 2px solid #505050; */
-        margin: -15px;
+
   }
 
 
