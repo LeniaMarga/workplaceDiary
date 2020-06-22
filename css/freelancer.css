@@ -9959,14 +9959,14 @@ form .row:first-child .floating-label-form-group {
 
 
 
-  .slider:::-ms-thumb {
+  .slider::-ms-thumb {
     	height: 35px;
     	width: 35px;
     	border-radius: 60%;
     	background: white;
     	border: 2px solid #505050;
     }
-    .slider:::-ms-thumb:hover {
+    .slider::-ms-thumb:hover {
     	background: #505050;
     	border: 2px solid white;
     	cursor: pointer;
