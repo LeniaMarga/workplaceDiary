@@ -9937,7 +9937,7 @@ form .row:first-child .floating-label-form-group {
     /* border: 2px solid #505050; */
     position: relative;
     z-index: 1000;
-    margin: -2px;
+  
   }
   .slider:active::-webkit-slider-thumb {
     background: white;
