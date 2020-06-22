@@ -9898,7 +9898,7 @@ form .row:first-child .floating-label-form-group {
 
 /* slider css */
 
-/**if I wease the borders     */
+/**the color is on the border and border shadow */
 
 .slider {
   outline: 0;
@@ -9939,11 +9939,11 @@ form .row:first-child .floating-label-form-group {
     z-index: 1000;
     margin: 7px;
   }
-  /* .slider:active::-webkit-slider-thumb {
+  .slider:active::-webkit-slider-thumb {
     background: black;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
     z-index: 1000;
-  } */
+  }
 
   .slider::-webkit-slider-thumb:hover {
     background: #505050;
