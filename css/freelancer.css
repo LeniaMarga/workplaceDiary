@@ -9934,7 +9934,7 @@ form .row:first-child .floating-label-form-group {
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
     border-radius: 50%;
     transition: box-shadow 0.2s ease-in-out;
-    /* border: 2px solid #505050; */
+    border: 2px solid #505050;
     position: relative;
     z-index: 1000;
 
@@ -9946,8 +9946,8 @@ form .row:first-child .floating-label-form-group {
   }
 
   .slider::-webkit-slider-thumb:hover {
-    /* background: #505050; */
-    /* border: 2px solid white; */
+    background: #505050;
+    border: 2px solid white;
     cursor: pointer;
     /* box-shadow: 0px 0px 12px #212121; */
   }
