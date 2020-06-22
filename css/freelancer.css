@@ -9913,22 +9913,22 @@ form .row:first-child .floating-label-form-group {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 .slider {
     overflow: hidden;
-    height: 10px;
+    height: 15px;
     -webkit-appearance: none;
     background-color: #ddd;
   }
 .slider::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 15px;
     -webkit-appearance: none;
     color: #444;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     transition: box-shadow 0.2s ease-in-out;
   }
 
 .slider::-webkit-slider-thumb {
-    width: 40px;
+    width: 15px;
     -webkit-appearance: none;
-    height: 40px;
+    height: 15px;
     cursor: ew-resize;
     background: white;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
