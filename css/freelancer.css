@@ -9895,6 +9895,7 @@ form .row:first-child .floating-label-form-group {
 
 }
 
+
 /* slider css */
 
 .slider {
@@ -9906,7 +9907,9 @@ form .row:first-child .floating-label-form-group {
   margin: 24px 0;
   transition: box-shadow 0.2s ease-in-out;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  
 .slider {
     overflow: hidden;
     height: 10px;
