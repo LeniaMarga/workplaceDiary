@@ -9913,12 +9913,12 @@ form .row:first-child .floating-label-form-group {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 .slider {
     overflow: hidden;
-    height: 40px;
+    height: 10px;
     -webkit-appearance: none;
     background-color: #ddd;
   }
 .slider::-webkit-slider-runnable-track {
-    height: 40px;
+    height: 10px;
     -webkit-appearance: none;
     color: #444;
     margin-top: 5px;
