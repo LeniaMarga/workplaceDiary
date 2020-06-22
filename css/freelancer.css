@@ -9926,9 +9926,9 @@ form .row:first-child .floating-label-form-group {
   }
 
 .slider::-webkit-slider-thumb {
-    width: 10px;
+    width: 40px;
     -webkit-appearance: none;
-    height: 10px;
+    height: 40px;
     cursor: ew-resize;
     background: white;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
@@ -9953,8 +9953,8 @@ form .row:first-child .floating-label-form-group {
   }
 
   .slider::-moz-range-thumb {
-  	height: 10px;
-  	width: 10px;
+  	height: 40px;
+  	width: 40px;
   	border-radius: 50%;
   	background: white;
   	/* border: 2px solid #505050; */
@@ -9963,8 +9963,8 @@ form .row:first-child .floating-label-form-group {
 
 
   .slider::-ms-thumb {
-    	height: 10px;
-    	width: 10px;
+    	height: 40px;
+    	width: 40px;
     	border-radius: 50%;
     	background: white;
     	/* border: 2px solid #505050; */
