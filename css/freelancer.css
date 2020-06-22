@@ -9932,7 +9932,7 @@ form .row:first-child .floating-label-form-group {
     cursor: ew-resize;
     background: white;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     transition: box-shadow 0.2s ease-in-out;
     /* border: 2px solid #505050; */
     position: relative;
@@ -9940,8 +9940,8 @@ form .row:first-child .floating-label-form-group {
     margin: 7px;
   }
   .slider:active::-webkit-slider-thumb {
-    background: black;
-    box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+    background: white;
+    /* box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff; */
     z-index: 1000;
   }
 
@@ -9967,13 +9967,13 @@ form .row:first-child .floating-label-form-group {
     	width: 35px;
     	border-radius: 60%;
     	background: white;
-    	/* border: 2px solid #505050; */
+    	border: 2px solid #505050;
     }
     .slider::-ms-thumb:hover {
     	background: #505050;
-    	/* border: 2px solid white; */
+    	border: 2px solid white;
     	cursor: pointer;
-    	box-shadow: 0px 0px 12px #212121;
+    	/* box-shadow: 0px 0px 12px #212121; */
     }
 
   }
