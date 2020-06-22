@@ -9964,11 +9964,11 @@ form .row:first-child .floating-label-form-group {
     	width: 35px;
     	border-radius: 60%;
     	background: white;
-    	border: 2px solid #505050;
+    	/* border: 2px solid #505050; */
     }
     .slider::-ms-thumb:hover {
     	background: #505050;
-    	border: 2px solid white;
+    	/* border: 2px solid white; */
     	cursor: pointer;
     	/* box-shadow: 0px 0px 12px #212121; */
     }
@@ -10000,4 +10000,3 @@ visibility:visible;
 
 
 /***AF slider****/
-.Af
