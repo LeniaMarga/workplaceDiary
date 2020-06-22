@@ -9937,7 +9937,7 @@ form .row:first-child .floating-label-form-group {
     /* border: 2px solid #505050; */
     position: relative;
     z-index: 1000;
-    margin: 15px;
+    margin: -15px;
   }
   .slider:active::-webkit-slider-thumb {
     background: white;
@@ -9958,6 +9958,7 @@ form .row:first-child .floating-label-form-group {
   	border-radius: 50%;
   	background: white;
   	/* border: 2px solid #505050; */
+        margin: -15px;
   }
 
 
@@ -9974,6 +9975,7 @@ form .row:first-child .floating-label-form-group {
     	/* border: 2px solid white; */
     	cursor: pointer;
     	/* box-shadow: 0px 0px 12px #212121; */
+
     }
 
   }
