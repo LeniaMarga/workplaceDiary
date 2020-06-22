@@ -9926,9 +9926,9 @@ form .row:first-child .floating-label-form-group {
   }
 
 .slider::-webkit-slider-thumb {
-    width: 35px;
+    width: 15px;
     -webkit-appearance: none;
-    height: 35px;
+    height: 15px;
     cursor: ew-resize;
     background: white;
     box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
@@ -9937,7 +9937,7 @@ form .row:first-child .floating-label-form-group {
     /* border: 2px solid #505050; */
     position: relative;
     z-index: 1000;
-    margin: 7px;
+    margin: 2px;
   }
   .slider:active::-webkit-slider-thumb {
     background: white;
@@ -9953,18 +9953,18 @@ form .row:first-child .floating-label-form-group {
   }
 
   .slider::-moz-range-thumb {
-  	height: 35px;
-  	width: 35px;
+  	height: 15px;
+  	width: 15px;
   	border-radius: 60%;
   	background: white;
-  	border: 2px solid #505050;
+  	/* border: 2px solid #505050; */
   }
 
 
 
   .slider::-ms-thumb {
-    	height: 35px;
-    	width: 35px;
+    	height: 15px;
+    	width: 15px;
     	border-radius: 60%;
     	background: white;
     	/* border: 2px solid #505050; */
