@@ -271,6 +271,11 @@
   <div class="container">
     <div class="form-group">
       <form novalidate="novalidate">
+        <button type="submit" class="btn btn-primary btn-xl" id="printall">Print</button>
+      </form>
+    </div>
+    <div class="form-group">
+      <form novalidate="novalidate">
         <button type="submit" class="btn btn-primary btn-xl" id="submitall">Submit</button>
       </form>
     </div>
@@ -592,6 +597,14 @@
              });
 
 
+
+          //print all
+          $('#printall').on('click', function(){
+                 window.print()
+              });
+
+
+
          //save all
            $('#submitall').on('click', function(){
                  var emotext = $("#emotionsarea")[0].emojioneArea.getText();
@@ -606,7 +619,7 @@
                  writePlaceData(placenow);
                  writeLastThoughts(lastthoughts);
                  // setTimeout(window.location.reload(), 60000);
-
+                 alert('Thanks, your feedback was received :)');
                  });
 
 
