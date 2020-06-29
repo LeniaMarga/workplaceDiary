@@ -266,6 +266,9 @@
 <section class="page-section" id="contact">
   <div class="container">
     <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-xl" style="background-color:lightgrey; border:none" id="printall">Print</button>
+    </div>
+    <div class="form-group">
       <form novalidate="novalidate">
          <button type="submit" class="btn btn-primary btn-xl" id="submitall">Submit</button>
       </form>
@@ -580,6 +583,13 @@
                     }
               });
 
+            //print all
+            $('#printall').on('click', function(){
+                     window.print();
+                     return false;
+                });
+
+
          //save emo text
           $('#submitall').on('click', function(){
              var emotext = $("#emotionsarea")[0].emojioneArea.getText();
@@ -598,6 +608,8 @@
              writeRestoreHow(restore);
              writeDistractionHow(distraction_what,distraction_how);
              writePlaces(placestoday);
+
+             alert('Thanks, your feedback was received :)');
 
              });
 
